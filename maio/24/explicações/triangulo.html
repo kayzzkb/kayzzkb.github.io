@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 03 - TIPO DE TRIANGULO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="form-tri">
+        <fieldset>
+            <legend>VERIFICADOR DE TRIÂNGULO</legend>
+            <label for="id_lado1">
+                Lado 1
+                <input type="number"
+                placeholder="Informe o tamanho"
+                minlength="1"
+                maxlength="10"
+                name="lado1"
+                id="id_lado1"
+                >
+            </label>
+            <label for="id_lado2">
+                Lado 02
+                <input 
+                    type="number"
+                    placeholder="Informe o tamanho"
+                    minlength="1"
+                    maxlength="10"
+                    name="lado2"
+                    id="id_lado2"
+                >
+            </label>
+
+             <label for="id_lado3">
+                Lado 03
+                <input 
+                    type="number"
+                    placeholder="Informe o tamanho"
+                    minlength="1"
+                    maxlength="10"
+                    name="lado3"
+                    id="id_lado3"
+                >
+            </label>
+            <div class="botoes">
+                <button id="verificar" type="submit">Verificar</button>
+                <button id="limpar" type="reset">Limpar Dados</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <script src="script_triangulos.js"></script>
+    
+    
+</body>
+</html>

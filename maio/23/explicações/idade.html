@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <form id ="Formulario">
+        <label for="id_nome"> Nome:
+            <input 
+            type="text"
+            id = "id_nome"
+            name = "nome"
+            placeholder="Informe seu nome"
+            >
+        </label>
+        <br>
+         <label for="id_idade"> Idade:
+            <input 
+            type="number"
+            id = "id_idade"
+            name = "idade"
+            placeholder="Informe sua idade"
+            >
+        </label>
+        <div class="botoes">
+            <button type="submit">Verificar</button>
+            <button type="reset">Limpar Dados</button>
+        </div>
+        <div id="resultado"></div>
+    </form>
+
+    <script>
+        let formulario = document.getElementById("Formulario");
+
+        formulario.addEventListener("submit", (evento)=>{
+            evento.preventDefault(); 
+            console.log("Entrou no evento."); 
+            let nome = document.getElementById("id_nome").value;
+            let idade = document.getElementById("id_idade").value;
+            let resultado = document.getElementById("resultado");
+            console.log(nome + "\n" + idade);
+
+            if(idade >=18){
+                resultado.innerHTML = "<strong>Maior de idade</strong>"
+            } else if (idade >= 1){
+                 resultado.innerHTML = "<strong>Menor de idade</strong>"
+            } else {
+                 resultado.innerHTML = "<strong>Idade Inválida</strong>"
+            }
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTOESCOLA - INSCRIÇÃO</title>
+</head>
+<body>
+    <h1>AUTOESCOLA PRONATEC - VERIFIQUE SUA IDADE</h1>
+
+    <form id="formulario">
+        <label for="idade">Informe sua idade:</label>
+        <input type="number" id="idade" name="idade" placeholder="Digite sua idade" required>
+        <link rel="stylesheet" href="inscrição.css">
+
+        <br><br>
+
+        <button type="submit">Verificar</button>
+    </form>
+
+    <p id="resultado"></p> 
+
+    <script>
+        
+        let formulario = document.getElementById("formulario");
+
+        formulario.addEventListener("submit", (evento) => {
+            evento.preventDefault(); 
+            
+            let idade = document.getElementById("idade").value;
+            let resultado = document.getElementById("resultado");
+
+           
+            if (idade >= 18 && idade <= 100) {
+                let mensagem = "<strong>APTO PARA O INÍCIO.</strong><br>";
+
+                
+                if (idade < 50) {
+                    mensagem += "Idade de renovação: <strong>10 ANOS</strong>";
+                } else if (idade <= 69) {
+                    mensagem += "Idade de renovação: <strong>5 ANOS</strong>";
+                } else {
+                    mensagem += "Idade de renovação: <strong>3 ANOS</strong>";
+                }
+
+                resultado.innerHTML = mensagem;
+            } else {
+                resultado.innerHTML = "<strong>INAPTO PARA INÍCIO.</strong>";
+            }
+        });
+    </script>
+</body>
+</html>

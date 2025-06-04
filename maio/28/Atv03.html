@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script da Tabuada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id ="form-tabuada">
+        <label for="">
+            <input 
+             type="number"
+             id = "id_numero"
+             placeholder = "Informe o número"
+             maxlength = "10"
+             name = "numero"
+             required
+             
+             >
+        </label>
+        <label for="id_operacao">Operação:
+            <select 
+             name="operaca"
+             id="id_operacao">
+             <option value="+">Adição</option>
+             <option value="-">Subtração</option>
+             <option value="*">Multiplicação</option>
+             <option value="/">Divisão</option>
+
+
+            </select>
+        </label>
+
+        <div class="botoes">
+            <button type="btnCalcular">Calcular</button>
+            <button type="reset">Limpar</button>
+        </div>
+    </form>
+    <div id="resultado"></div>
+    <script src = "script_tabuada.js"></script>
+    
+</body>
+</html>
